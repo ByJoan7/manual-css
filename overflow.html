@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manual CSS - Overflow</title>
+</head>
+<body>
+    <header>Overflow</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+    <div class="container">
+        <div class="section">
+            <header>Disseny CSS: la propietat Overflow</header>
+            <div class="intro">
+                <p>La propietat <span class="code">overflow</span> controla què passa quan el contingut d'un element és massa gran per cabre en l'àrea especificada.</p>
+            </div>
+
+            <div class="example">
+                <header>Valors de Overflow</header>
+                <p>Els valors més comuns de la propietat <span class="code">overflow</span> són:</p>
+                <ul>
+                    <li><span class="code">visible</span> (per defecte): El desbordament no es retalla. El contingut sobresurt de l'element.</li>
+                    <li><span class="code">hidden</span>: El desbordament es retalla i el contingut sobrant no es mostra.</li>
+                    <li><span class="code">scroll</span>: El desbordament es retalla i es mostren barres de desplaçament per veure el contingut sobrant.</li>
+                    <li><span class="code">auto</span>: El desbordament es retalla i es mostren barres de desplaçament només si és necessari per veure el contingut.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <header>overflow: visible;</header>
+                <div class="example">
+                    <p>Un element amb <span class="code">overflow: visible;</span> permetrà que el contingut que sobresurti de l'element es mostri.</p>
+                    <div class="code">
+                        <code>
+                            div.visible { <br>
+                                overflow: visible; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                                border: 3px solid #73AD21; <br>
+                            } 
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <header>overflow: hidden;</header>
+                <div class="example">
+                    <p>Un element amb <span class="code">overflow: hidden;</span> retallarà el contingut que sobresurti del seu àrea.</p>
+                    <div class="code">
+                        <code>
+                            div.hidden { <br>
+                                overflow: hidden; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                                border: 3px solid #73AD21; <br>
+                            } 
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <header>overflow: scroll;</header>
+                <div class="example">
+                    <p>Un element amb <span class="code">overflow: scroll;</span> mostrarà barres de desplaçament sempre que el contingut sobresurti del seu àrea, independentment de si el desbordament és horitzontal, vertical o ambdós.</p>
+                    <div class="code">
+                        <code>
+                            div.scroll { <br>
+                                overflow: scroll; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                                border: 3px solid #73AD21; <br>
+                            } 
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <header>overflow: auto;</header>
+                <div class="example">
+                    <p>Un element amb <span class="code">overflow: auto;</span> mostrarà barres de desplaçament només si el contingut sobresurti del seu àrea.</p>
+                    <div class="code">
+                        <code>
+                            div.auto { <br>
+                                overflow: auto; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                                border: 3px solid #73AD21; <br>
+                            } 
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <header>Conclusió</header>
+                <div class="conclusion">
+                    <p>La propietat de CSS <span class="code">overflow</span> és útil per controlar com es mostra el contingut quan aquest és més gran que l'àrea de l'element. Coneixent els diferents valors de <span class="code">overflow</span> permet als desenvolupadors gestionar el desbordament de contingut de manera eficient.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        Joan Balbastre Gomis ©2024
+    </div>
+
+</body>
+</html>

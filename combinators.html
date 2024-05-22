@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Combinadors</title>
+</head>
+<body>
+    <header>Combinadors</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+    <div class="container">
+        <div class="section">
+            <header>Combinadors en CSS</header>
+            <div class="content">
+                <p>Els combinadors en CSS permeten seleccionar elements en funció de la seva relació amb altres elements. Hi ha quatre tipus principals de combinadors:</p>
+                <ul>
+                    <li><span class="code">Combinador de Descendent ( )</span></li>
+                    <li><span class="code">Combinador de Fill (>)</span></li>
+                    <li><span class="code">Combinador de Germà Adjacent (+)</span></li>
+                    <li><span class="code">Combinador de Germà General (~)</span></li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <header>Combinador de Descendent</header>
+                <div class="description">
+                    <p>El combinador de descendent selecciona elements que són descendents d'un altre element. Es representa amb un espai entre els selectors.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        div p { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: blue; <br>
+                        }
+                    </code>
+                </div>
+                <div class="output">
+                    <div style="border: 1px solid #000; padding: 10px;">
+                        <p style="color: blue;">Aquest paràgraf és un descendent d'un div.</p>
+                        <div style="border: 1px solid #000; padding: 10px;">
+                            <p style="color: blue;">Aquest també és un descendent d'un div.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <header>Combinador de Fill</header>
+                <div class="description">
+                    <p>El combinador de fill selecciona elements que són fills directes d'un altre element. Es representa amb el símbol <span class="code">></span>.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        div > p { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: green; <br>
+                        }
+                    </code>
+                </div>
+                <div class="output">
+                    <div style="border: 1px solid #000; padding: 10px;">
+                        <p style="color: green;">Aquest paràgraf és un fill directe d'un div.</p>
+                        <div style="border: 1px solid #000; padding: 10px;">
+                            <p>Aquest no és un fill directe d'un div.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <header>Combinador de Germà Adjacent</header>
+                <div class="description">
+                    <p>El combinador de germà adjacent selecciona un element que és immediatament adjunt a un altre element. Es representa amb el símbol <span class="code">+</span>.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        h1 + p { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: red; <br>
+                        }
+                    </code>
+                </div>
+                <div class="output">
+                    <h1>Encapçalament</h1>
+                    <p style="color: red;">Aquest paràgraf és immediatament adjunt a un h1.</p>
+                    <p>Aquest paràgraf no està seleccionat.</p>
+                </div>
+            </div>
+
+            <div class="example">
+                <header>Combinador de Germà General</header>
+                <div class="description">
+                    <p>El combinador de germà general selecciona tots els elements que són germans d'un altre element. Es representa amb el símbol <span class="code">~</span>.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        h1 ~ p { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: purple; <br>
+                        }
+                    </code>
+                </div>
+                <div class="output">
+                    <h1>Encapçalament</h1>
+                    <p style="color: purple;">Aquest paràgraf és un germà d'un h1.</p>
+                    <p style="color: purple;">Aquest també és un germà d'un h1.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>Conclusió</header>
+            <div class="conclusion">
+                <p>Els combinadors en CSS són una eina potent per seleccionar elements en funció de les seves relacions amb altres elements. Comprendre com utilitzar els combinadors de descendent, fill, germà adjacent i germà general permet crear selectores més precisos i eficients, facilitant el disseny i la gestió dels estils en una pàgina web.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Joan Balbastre Gomis ©2024
+    </div>
+
+</body>
+</html>

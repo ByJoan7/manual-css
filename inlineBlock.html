@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Display: Inline-block</title>
+</head>
+<body>
+    <header>Display: Inline-block</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+    <div class="container">
+        <div class="section">
+            <header>Display: Inline-block</header>
+            <div class="content">
+                <p>La propietat <span class="code">display: inline-block;</span> combina els avantatges dels elements inline i block. Els elements inline-block es col·loquen en la mateixa línia que el text adjacent, però poden tenir un ample i una alçada definits, així com marges i farcits.</p>
+                <div class="example">
+                    <header>Exemple 1: Aliniament Horitzontal</header>
+                    <div class="description">
+                        <p>En aquest exemple, es mostra com es poden alinear diversos elements horitzontalment utilitzant <span class="code">display: inline-block;</span>.</p>
+                    </div>
+                    <div class="code">
+                        <code>
+                            .box { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 100px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #73AD21; <br>
+                            }
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <p>Aquests elements es col·loquen en línia i poden tenir dimensions definides gràcies a <span class="code">display: inline-block;</span>.</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <header>Exemple 2: Botons en Línia</header>
+                    <div class="description">
+                        <p>En aquest exemple, es mostra com utilitzar <span class="code">display: inline-block;</span> per alinear botons en línia horitzontalment.</p>
+                    </div>
+                    <div class="code">
+                        <code>
+                            .button { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px 20px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 5px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #4CAF50; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 4px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none; <br>
+                            }
+                        </code>
+                    </div>
+                    <div class="output">
+                        <a href="#" class="button" >Botó 1</a>
+                        <a href="#" class="button" >Botó 2</a>
+                        <a href="#" class="button" >Botó 3</a>
+                        <p>Aquests botons estan alineats en línia horitzontalment gràcies a <span class="code">display: inline-block;</span>.</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <header>Exemple 3: Layout de Galeria</header>
+                    <div class="description">
+                        <p>En aquest exemple, es mostra com utilitzar <span class="code">display: inline-block;</span> per crear un layout de galeria d'imatges.</p>
+                    </div>
+                    <div class="code">
+                        <code>
+                            .gallery { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center; <br>
+                            } <br>
+                            .gallery img { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 200px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: auto; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid #ddd; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 4px; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0 0 5px rgba(0,0,0,0.1); <br>
+                            }
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="gallery" style="text-align: center;">
+                            <img src="image1.jpg" alt="Imatge 1" >
+                            <img src="image2.jpg" alt="Imatge 2" >
+                            <img src="image3.jpg" alt="Imatge 3" >
+                            <img src="image4.jpg" alt="Imatge 4" >
+                        </div>
+                        <p>Aquesta galeria d'imatges utilitza <span class="code">display: inline-block;</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="section">
+                    <header>Avantatges i Desavantatges</header>
+                    <div class="content">
+                        <p>Els elements <span class="code">inline-block</span> ofereixen diversos avantatges per al disseny web:</p>
+                        <ul>
+                            <li><strong>Flexibilitat:</strong> Es poden alinear en línia com els elements inline però també poden tenir dimensions definides com els elements block.</li>
+                            <li><strong>Control de Layout:</strong> Permet una millor manipulació del layout en comparació amb l'ús de només elements inline o block.</li>
+                            <li><strong>Compatibilitat:</strong> És compatible amb la majoria dels navegadors moderns i antics.</li>
+                        </ul>
+                        <p>Tanmateix, també presenta alguns desavantatges:</p>
+                        <ul>
+                            <li><strong>Espais en blanc:</strong> Els elements <span class="code">inline-block</span> poden generar espais en blanc entre ells, degut a que es comporten com text. Això es pot solucionar ajustant el CSS o eliminant els espais en el codi HTML.</li>
+                            <li><strong>Complexitat:</strong> A vegades pot ser més complex de gestionar en comparació amb altres mètodes de layout com Flexbox o CSS Grid.</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="section">
+                    <header>Conclusió</header>
+                    <div class="conclusion">
+                        <p>La propietat <span class="code">display: inline-block</span> és una eina molt útil en el disseny web, especialment quan es vol combinar el comportament dels elements inline i block. Permet crear layouts flexibles i controlats, mantenint una compatibilitat àmplia amb diferents navegadors. Tot i això, és important considerar els avantatges i desavantatges per assegurar-se que és la millor opció per al disseny desitjat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            Joan Balbastre Gomis ©2024
+        </div>
+    
+    </body>
+    </html>

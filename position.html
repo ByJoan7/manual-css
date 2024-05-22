@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manual CSS</title>
+</head>
+<body>
+    <header>Position</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+<div class="container">
+    <div class="section">
+        <header>Disseny CSS: la propietat de posició</header>
+        <div class="intro">
+            <p>La propietat <span class="code">position</span> especifica el tipus de mètode de posicionament utilitzat per a un element (estàtic, relatiu, fix, absolut o adherit).</p>
+        </div>
+
+        <div class="example">
+            <header>La propietat Position</header>
+            <p>La propietat <span class="code">position</span> especifica el tipus de mètode de posicionament utilitzat per a un element.</p>
+            <p>Hi ha cinc valors de posició diferents:</p>
+            <ul>
+                <li><span class="code">static</span></li>
+                <li><span class="code">relative</span></li>
+                <li><span class="code">fixed</span></li>
+                <li><span class="code">absolute</span></li>
+                <li><span class="code">sticky</span></li>
+            </ul>
+            <p>Llavors, els elements es col·loquen utilitzant les propietats superior, inferior, esquerra i dreta. No obstant això, aquestes propietats no funcionaran llevat que <span class="code">position</span> s'estableixi primer. També funcionen de manera diferent segons el valor de la posició.</p>
+        </div>
+
+        <div class="section">
+            <header>position: static;</header>
+            <div class="example">
+                <p>Els elements HTML es col·loquen estàtics de forma predeterminada.</p>
+                <p>Els elements posicionats estàticament no es veuen afectats per les propietats superior, inferior, esquerra i dreta.</p>
+                <div class="code">
+                    <code>
+                        div.static { <br>
+                            position: static; <br>
+                            border: 3px solid #73AD21; <br>
+                        } 
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>position: fixed;</header>
+            <div class="example">
+                <p>Un element amb <span class="code">position: fixed;</span> es col·loca en relació amb la finestra gràfica, la qual cosa significa que sempre roman en el mateix lloc fins i tot si es desplaça la pàgina. Les propietats superior, dreta, inferior i esquerra s'utilitzen per posicionar l'element.</p>
+                <p>Un element fix no deixa un espai a la pàgina on normalment s'hauria ubicat.</p>
+                <div class="code">
+                    <code>
+                        div.fixed { <br>
+                            position: fixed; <br>
+                            bottom: 0; <br>
+                            right: 0; <br>
+                            width: 300px; <br>
+                            border: 3px solid #73AD21; <br>
+                        }
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>position: relative;</header>
+            <div class="example">
+                <p>Un element amb <span class="code">position: relative;</span> es col·loca en relació amb la seva posició normal.</p>
+                <p>L'establiment de les propietats superior, dreta, inferior i esquerra d'un element en posició relativa farà que s'ajusti fora de la seva posició normal. La resta del contingut no s'ajustarà per encaixar en cap espai deixat per l'element.</p>
+                <div class="code">
+                    <code>
+                        div.relative { <br>
+                            position: relative; <br>
+                            left                            : 30px; <br>
+                            border: 3px solid #73AD21; <br>
+                        } 
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>position: absolute;</header>
+            <div class="example">
+                <p>Un element amb <span class="code">position: absolute;</span> es col·loca en relació amb el primer element pare que té una posició diferent a <span class="code">static</span>.</p>
+                <p>Si no hi ha cap pare, s'usarà l'element de nivell superior: el cos de la pàgina.</p>
+                <p>La posició absoluta permet que l'element es "treu" del flux normal de la pàgina, i la resta dels elements se comporten com si no hi fos.</p>
+                <div class="code">
+                    <code>
+                        div.absolute { <br>
+                            position: absolute; <br>
+                            right: 0; <br>
+                            width: 200px; <br>
+                            border: 3px solid #73AD21; <br>
+                        } 
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>position: sticky;</header>
+            <div class="example">
+                <p>Un element amb <span class="code">position: sticky;</span> es comporta com un element relatiu fins que arriba a un cert punt, llavors es converteix en un element fix («enganxós»).</p>
+                <p>El comportament enganxós només funciona en els navegadors moderns.</p>
+                <div class="code">
+                    <code>
+                        div.sticky { <br>
+                            position: -webkit-sticky; <br>
+                            position: sticky; <br>
+                            top: 0; <br>
+                            background-color: green; <br>
+                            border: 2px solid #4CAF50; <br>
+                        } 
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <header>Conclusió</header>
+            <div class="conclusion">
+                <p>La propietat de CSS <span class="code">position</span> és crucial per al disseny web avançat, ja que controla com els elements es col·loquen en la pàgina. Entendre els valors de posició (estàtic, relatiu, fix, absolut i enganxós) i com afecten l'aparença dels elements és fonamental per a un desenvolupament web reeixit.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    Joan Balbastre Gomis ©2024
+</div>
+
+</body>
+</html>
+

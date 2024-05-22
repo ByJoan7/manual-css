@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Float i Clear: Clear</title>
+</head>
+<body>
+    <header>Float i Clear: Clear</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+    <div class="container">
+        <div class="section">
+            <header>Clear</header>
+            <div class="content">
+                <p>La propietat <span class="code">clear</span> en CSS s'utilitza per controlar el comportament dels elements que segueixen elements flotants. Amb <span class="code">clear</span>, podem evitar que un element es posicioni al costat d'un element flotant, obligant-lo a situar-se per sota d'aquest.</p>
+                <p>Els valors de la propietat <span class="code">clear</span> són:</p>
+                <ul>
+                    <li><span class="code">left</span>: No permet que l'element se situï a l'esquerra d'un element flotant.</li>
+                    <li><span class="code">right</span>: No permet que l'element se situï a la dreta d'un element flotant.</li>
+                    <li><span class="code">both</span>: No permet que l'element se situï ni a l'esquerra ni a la dreta d'un element flotant.</li>
+                    <li><span class="code">none</span>: Permet que l'element se situï al costat d'un element flotant (valor per defecte).</li>
+                </ul>
+                <p>És important utilitzar <span class="code">clear</span> per evitar problemes de disseny quan es treballa amb elements flotants, especialment en layouts complexos.</p>
+                <div class="code">
+                    <code>
+                        div.cleared { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;clear: both; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 100%; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;height: 50px; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #ff6347; <br>
+                        }
+                    </code>
+                </div>
+                <p>En l'exemple anterior, el div amb la classe <span class="code">cleared</span> no es situarà ni a l'esquerra ni a la dreta de cap element flotant, garantint que es col·loqui per sota d'aquests.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Joan Balbastre Gomis ©2024
+    </div>
+
+</body>
+</html>

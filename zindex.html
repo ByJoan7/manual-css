@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manual CSS - Z-Index</title>
+</head>
+<body>
+    <header>Z-index</header>
+    <!-- Barra de navegación -->
+    <ul class="nav-bar">
+        <li class="nav-option selected"><a href="index.html">Home</a></li>
+        <li class="nav-option"><a href="display.html">Display</a></li>
+        <li class="nav-option"><a href="position.html">Position</a></li>
+        <li class="nav-option"><a href="zindex.html">Z-Index</a></li>
+        <li class="nav-option"><a href="overflow.html">Overflow</a></li>
+        <li class="nav-option dropdown"><a href="floatClear.html">Float and Clear</a>
+            <div class="dropdown-content">
+                <a href="floatClear.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="floatex.html">Float examples</a>
+              </div>
+            </li>
+        <li class="nav-option"><a href="inlineBlock.html">Display: Inline-block</a></li>
+        <li class="nav-option dropdown"><a href="combinators.html">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="pseudoclass.html">Pseudo-classes</a>
+                <a href="elements.html">Pseudo-elements</a>
+              </div>
+            </li>
+    </ul>
+
+    <div class="container">
+        <div class="section">
+            <header>Disseny CSS: la propietat Z-Index</header>
+            <div class="intro">
+                <p>La propietat <span class="code">z-index</span> especifica l'ordre de les capes d'un element posicionat (és a dir, un element amb una propietat de <span class="code">position</span> diferent de <span class="code">static</span>). Un element amb un valor de <span class="code">z-index</span> més alt sempre es col·locarà davant d'un element amb un valor de <span class="code">z-index</span> més baix.</p>
+            </div>
+
+            <div class="example">
+                <header>Ús bàsic de Z-Index</header>
+                <p>Els valors de <span class="code">z-index</span> poden ser positius, negatius o zero:</p>
+                <ul>
+                    <li>Un valor positiu situarà l'element davant d'altres elements.</li>
+                    <li>Un valor negatiu situarà l'element darrere d'altres elements.</li>
+                    <li>Un valor de zero situarà l'element en el mateix nivell que altres elements amb un valor de zero.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <header>Exemple de Z-Index</header>
+                <div class="example">
+                    <p>Considerem tres elements amb diferents valors de <span class="code">z-index</span>:</p>
+                    <div class="code">
+                        <code>
+                            div.first { <br>
+                                position: absolute; <br>
+                                left: 20px; <br>
+                                top: 20px; <br>
+                                z-index: 1; <br>
+                                background-color: lightblue; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                            } <br><br>
+                            div.second { <br>
+                                position: absolute; <br>
+                                left: 40px; <br>
+                                top: 40px; <br>
+                                z-index: 2; <br>
+                                background-color: lightgreen; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                            } <br><br>
+                            div.third { <br>
+                                position: absolute; <br>
+                                left: 60px; <br>
+                                top: 60px; <br>
+                                z-index: 3; <br>
+                                background-color: lightcoral; <br>
+                                width: 100px; <br>
+                                height: 100px; <br>
+                            } 
+                        </code>
+                    </div>
+                    <p>Aquest codi crea tres elements superposats, on l'element amb el valor de <span class="code">z-index</span> més alt (3) es mostrarà davant dels altres.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <header>Conclusió</header>
+                <div class="conclusion">
+                    <p>La propietat de CSS <span class="code">z-index</span> és essencial per controlar l'ordre de les capes dels elements en una pàgina web. Comprendre com utilitzar <span class="code">z-index</span> és fonamental per a la creació de dissenys web complexos i interactius.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        Joan Balbastre Gomis ©2024
+    </div>
+
+</body>
+</html>
